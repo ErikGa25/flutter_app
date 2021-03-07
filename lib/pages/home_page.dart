@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/widgets/alert_widget.dart';
+import 'package:flutter_app/widgets/drawer_widgte.dart';
+import 'package:flutter_app/widgets/snackbar_widget.dart';
 
 class HomePage extends StatelessWidget {
-
   final double _space = 45.0;
+  final scaffKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
-    
     double widthMedia = MediaQuery.of(context).size.width * 0.60;
 
     return SafeArea(
       child: Scaffold(
+        key: scaffKey,
         appBar: AppBar(
           backgroundColor: Color.fromRGBO(235, 138, 68, 1.0),
           title: Text('Flutter App'),
@@ -42,7 +45,7 @@ class HomePage extends StatelessWidget {
                   splashColor: Colors.greenAccent, 
                   icon: Icon(Icons.message), 
                   label: Text('Notificación', style: TextStyle(fontSize: 20.0)),
-                  onPressed: (){},
+                  onPressed: () => showSnackBarData(scaffKey)
                 ),
 
                 SizedBox(height: _space),
@@ -51,34 +54,18 @@ class HomePage extends StatelessWidget {
                   padding: EdgeInsets.all(15.0),
                   onPressed: null,
                   child: Text('Botón Deshabilitado', style: TextStyle(fontSize: 20.0)),
-                ),
-
-                SizedBox(height: _space),
-
-                Material(
-                  child: Center(
-                    child: Ink(
-                      decoration: const ShapeDecoration(
-                        color: Colors.teal,
-                        shape: CircleBorder(),
-                      ),
-                      child: IconButton(
-                        icon: Icon(Icons.notification_important, size: 30.0),
-                        color: Colors.white,
-                        onPressed: () {},
-                      ),
-                    ),
-                  ),
-                ),
-              ],
+                )
+              ]
             )
-          ],
+          ]
         ),
+
+        endDrawer: showDrawerMenu(context),
 
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.black54,
           child: Icon(Icons.person),
-          onPressed: (){},
+          onPressed: () => showAlertDialogData(context)
         ),
       ),
     );
