@@ -66,8 +66,8 @@ class HomePage extends StatelessWidget {
           backgroundColor: Colors.black54,
           child: Icon(Icons.person),
           onPressed: () => showAlertDialogData(context)
-        ),
-      ),
+        )
+      )
     );
   }
 }
