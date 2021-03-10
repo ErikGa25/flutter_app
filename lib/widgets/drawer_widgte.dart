@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 Widget showDrawerMenu(BuildContext context) {
+  Color _colorDivider = Colors.amber[800];
+  double _thick = 0.45;
+
   return Drawer(
     child: ListView(
       children: <Widget>[
@@ -14,27 +17,32 @@ Widget showDrawerMenu(BuildContext context) {
           child: Text(
             'Pixabay', 
             style: TextStyle(color: Colors.white),
-            textAlign: TextAlign.end,
-          ),
+            textAlign: TextAlign.end
+          )
         ),
 
         ListTile(
           title: Text('Inicio'),
-          onTap: () {
-            Navigator.pop(context);
-          },
+          onTap: () => Navigator.pushReplacementNamed(context, 'home')
         ),
 
-        Divider(color: Colors.amber[800], thickness: 0.45),
+        Divider(color: _colorDivider, thickness: _thick),
 
         ListTile(
-          title: Text('Información'),
-          onTap: () {
-            Navigator.pop(context);
-          },
+          title: Text('Texto'),
+          onTap: () => Navigator.pushReplacementNamed(context, 'texto')
         ),
 
-        Divider(color: Colors.amber[800], thickness: 0.45)
+        Divider(color: _colorDivider, thickness: _thick),
+
+        ListTile(
+          title: Text('Formulario'),
+          onTap: () {
+            Navigator.pop(context);
+          }
+        ),
+
+        Divider(color: _colorDivider, thickness: _thick)
       ]
     )
   );
