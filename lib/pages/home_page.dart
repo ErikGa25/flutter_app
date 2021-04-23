@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
                   padding: EdgeInsets.all(15.0),
                   splashColor: Colors.orangeAccent,
                   child: Text('Lista de Compras', style: TextStyle(fontSize: 20.0)),
-                  onPressed: (){}, 
+                  onPressed: () => Navigator.pushReplacementNamed(context, 'lista')
                 ),
 
                 SizedBox(height: _space),
