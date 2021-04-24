@@ -80,8 +80,8 @@ void _shareTextApp() async {
   try {
     await WcFlutterShare.share(
       sharePopupTitle: 'Compartir con:',
-      subject: '#Flutter App',
-      text: '#Flutter App: ' + dateFormat,
+      subject: '#FlutterApp',
+      text: '#FlutterApp: ' + dateFormat,
       mimeType: 'text/plain'
     );
   } catch (e) {
