@@ -25,8 +25,8 @@ class HomePage extends StatelessWidget {
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
               colors: [
-                Colors.yellow[600],
-                Colors.grey[600],
+                Colors.blue[400],
+                Colors.red[300],
               ]
             )
           ),
@@ -39,7 +39,7 @@ class HomePage extends StatelessWidget {
 
                   FlatButton(
                     minWidth: widthMedia,
-                    color: Colors.blue[400],
+                    color: Colors.green[400],
                     textColor: Colors.white,
                     padding: EdgeInsets.all(15.0),
                     splashColor: Colors.orangeAccent,
