@@ -10,7 +10,7 @@ class TextoPage extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: Color.fromRGBO(235, 138, 68, 1.0),
-            title: Text('Flutter App'),
+            title: Text('Texto'),
           ),
 
           body: ListView(

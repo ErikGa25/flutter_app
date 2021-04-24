@@ -17,7 +17,7 @@ class _ListaPageState extends State<ListaPage> {
         child: Scaffold(
           appBar: AppBar(
               backgroundColor: Color.fromRGBO(235, 138, 68, 1.0),
-              title: Text('Flutter App'),
+              title: Text('Lista BD'),
           ),
 
           body: FutureBuilder<List<FlutterModel>>(

@@ -19,45 +19,58 @@ class HomePage extends StatelessWidget {
           title: Text('Flutter App'),
         ),
 
-        body: ListView(
-          children: [
-            Column(
-              children: [
-                SizedBox(height: 100.0),
-
-                FlatButton(
-                  minWidth: widthMedia,
-                  color: Colors.blue[400],
-                  textColor: Colors.white,
-                  padding: EdgeInsets.all(15.0),
-                  splashColor: Colors.orangeAccent,
-                  child: Text('Lista de Compras', style: TextStyle(fontSize: 20.0)),
-                  onPressed: () => Navigator.pushReplacementNamed(context, 'lista')
-                ),
-
-                SizedBox(height: _space),
-
-                FlatButton.icon(
-                  minWidth: widthMedia,
-                  color: Colors.red[400],
-                  textColor: Colors.white,
-                  padding: EdgeInsets.all(15.0),
-                  splashColor: Colors.greenAccent, 
-                  icon: Icon(Icons.message), 
-                  label: Text('Notificación', style: TextStyle(fontSize: 20.0)),
-                  onPressed: () => showSnackBarData(scaffKey)
-                ),
-
-                SizedBox(height: _space),
-
-                RaisedButton(
-                  padding: EdgeInsets.all(15.0),
-                  onPressed: null,
-                  child: Text('Botón Deshabilitado', style: TextStyle(fontSize: 20.0)),
-                )
+        body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: [
+                Colors.yellow[600],
+                Colors.grey[600],
               ]
             )
-          ]
+          ),
+          child: ListView(
+            children: [
+              Column(
+                
+                children: [
+                  SizedBox(height: 100.0),
+
+                  FlatButton(
+                    minWidth: widthMedia,
+                    color: Colors.blue[400],
+                    textColor: Colors.white,
+                    padding: EdgeInsets.all(15.0),
+                    splashColor: Colors.orangeAccent,
+                    child: Text('Lista de Compras', style: TextStyle(fontSize: 20.0)),
+                    onPressed: () => Navigator.pushReplacementNamed(context, 'lista')
+                  ),
+
+                  SizedBox(height: _space),
+
+                  FlatButton.icon(
+                    minWidth: widthMedia,
+                    color: Colors.red[400],
+                    textColor: Colors.white,
+                    padding: EdgeInsets.all(15.0),
+                    splashColor: Colors.greenAccent, 
+                    icon: Icon(Icons.message), 
+                    label: Text('Notificación', style: TextStyle(fontSize: 20.0)),
+                    onPressed: () => showSnackBarData(scaffKey)
+                  ),
+
+                  /*SizedBox(height: _space),
+
+                  RaisedButton(
+                    padding: EdgeInsets.all(15.0),
+                    onPressed: null,
+                    child: Text('Botón Deshabilitado', style: TextStyle(fontSize: 20.0)),
+                  )*/
+                ]
+              )
+            ]
+          ),
         ),
 
         endDrawer: showDrawerMenu(context),
