@@ -8,4 +8,4 @@ Después de descargae el proyecto ejecutar los siguientes comandos:
 
 | Inico | Menu |
 | --- | --- |
-| ![App](https://github.com/ErikGa25/flutter_app/blob/master/assets/screenshot/imagen1.jpg) | ![App](https://github.com/ErikGa25/flutter_app/blob/master/assets/screenshot/imagen2.jpg) |
+| ![Inico](https://github.com/ErikGa25/flutter_app/blob/master/assets/screenshot/imagen1.jpg) | ![Menu](https://github.com/ErikGa25/flutter_app/blob/master/assets/screenshot/imagen2.jpg) |
