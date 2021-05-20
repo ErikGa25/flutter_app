@@ -33,6 +33,7 @@ dependencies:
   url_launcher: ^5.5.0
   wc_flutter_share: ^0.2.2
   fluttericon: ^1.0.7
+  photo_view: ^0.10.2
 
 dev_dependencies:
   flutter_test:
