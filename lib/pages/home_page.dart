@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
                     textColor: Colors.white,
                     padding: EdgeInsets.all(15.0),
                     splashColor: Colors.orangeAccent,
-                    child: Text('Lista de Compras', style: TextStyle(fontSize: 20.0)),
+                    child: Text('Lista de BD', style: TextStyle(fontSize: 20.0)),
                     onPressed: () => Navigator.pushReplacementNamed(context, 'lista')
                   ),
 
@@ -60,13 +60,15 @@ class HomePage extends StatelessWidget {
                     onPressed: () => showSnackBarData(scaffKey)
                   ),
 
-                  /*SizedBox(height: _space),
+                  SizedBox(height: _space),
 
                   RaisedButton(
                     padding: EdgeInsets.all(15.0),
-                    onPressed: null,
-                    child: Text('Botón Deshabilitado', style: TextStyle(fontSize: 20.0)),
-                  )*/
+                    child: Text('Rotación y Zoom', style: TextStyle(fontSize: 20.0)),
+                    onPressed: () => Navigator.pushReplacementNamed(context, 'imagenes')
+                  ),
+
+                  SizedBox(height: _space)
                 ]
               )
             ]

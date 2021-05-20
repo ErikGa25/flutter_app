@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/home_page.dart';
+import 'package:flutter_app/pages/imagenes_page.dart';
 import 'package:flutter_app/pages/lista_page.dart';
 import 'package:flutter_app/pages/texto_page.dart';
  
@@ -13,10 +14,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter App',
       initialRoute: 'home',
       routes: {
-        'home'  : (BuildContext context) => HomePage(),
-        'texto' : (BuildContext context) => TextoPage(),
-        'lista' : (BuildContext context) => ListaPage(),
-      },
+        'home'     : (BuildContext context) => HomePage(),
+        'texto'    : (BuildContext context) => TextoPage(),
+        'lista'    : (BuildContext context) => ListaPage(),
+        'imagenes' : (BuildContext context) => ImagenesPage(),
+      }
     );
   }
 }
